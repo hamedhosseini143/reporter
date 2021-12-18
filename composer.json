@@ -17,10 +17,14 @@
     "require": {
         "composer/installers": "^1.2",
         "drupal/admin_toolbar": "^3.0",
+        "drupal/calendar_systems": "^3.6",
+        "drupal/charts": "^3.3",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/devel": "^4.1",
+        "drupal/entity_redirect": "^2.0",
         "drupal/module_filter": "^3.2"
     },
     "conflict": {
