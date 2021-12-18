@@ -1,0 +1,12 @@
+global-styling:
+  version: VERSION
+  js:
+    js/bootstrap.min.js: {}
+  css:
+    component:
+      css/bootstrap.min.css: {}
+      css/fonts/Farsi-Digits-Without-Latin/font-face-FD-WOL.css: {}
+      css/icofont.min.css: {}
+      css/style.min.css: {}
+      css/custom.css: {}
+

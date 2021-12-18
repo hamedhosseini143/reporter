@@ -11,7 +11,8 @@ vendor/
 **/node_modules/**/*
 /web/sites/simpletest
 /web/modules/contrib
-/web/modules/libraries
+/web/libraries
+/web/libraries/*
 /web/themes/contrib
 /web/sites/default/files/css
 /web/sites/default/files/js

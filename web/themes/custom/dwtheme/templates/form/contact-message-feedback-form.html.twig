@@ -1,0 +1,33 @@
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+<div class="container">
+  <div class="row contact-us-sm">
+
+      <div class="col-md-6">
+        {{ render_block('tmasbama') }}
+      </div>
+      <div class="col-md-6">
+        <div>
+          {{ form.name }}
+        </div>
+        <div>
+          {{ form.mail }}
+        </div>
+        <div>
+          {{ form.subject }}
+        </div>
+        <div>
+          {{ form.message }}
+        </div>
+        <div>
+          {{ form|without('name', 'mail', 'subject', 'message', 'actions', 'captcha') }}
+          <div id="msg" class="message"></div>
+        </div>
+        <div class="col-md-12">
+          {{ form.captcha }}
+          {{ form.actions }}
+        </div>
+      </div>
+  </div>
+</div>

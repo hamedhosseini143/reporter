@@ -1,0 +1,193 @@
+<div id="page-wrapper">
+  <div id="page">
+    {% if page.top_header_form %}
+      <section class="top-bar-sec">
+        <aside class="{{ container }} section clearfix" role="complementary">
+          {{ page.top_header_form }}
+        </aside>
+      </section>
+    {% endif %}
+    <header id="header" class="header header-section" role="banner"
+            aria-label="{{ 'Site header'|t }}">
+      <div class="header-area">
+        {% block head %}
+          <nav{{ navbar_attributes }}>
+            <div class="container">
+              {{ page.header }}
+              {% if page.primary_menu or page.header_form %}
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon1"></span>
+                  <span class="navbar-toggler-icon2"></span>
+                  <span class="navbar-toggler-icon3"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="CollapsingNavbar">
+                  {{ page.primary_menu }}
+                  {% if page.header_form %}
+                    <div class="form-inline navbar-form justify-content-end">
+                      {{ page.header_form }}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+              {% if sidebar_collapse %}
+                <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false"
+                        aria-label="Toggle navigation"></button>
+              {% endif %}
+              {% if container_navbar %}
+            </div>
+            {% endif %}
+          </nav>
+        {% endblock %}
+      </div>
+    </header>
+
+    {# add hight light regin  for slider home #}
+    {% if page.highlighted %}
+      <section class="banner-section pb-0 ">
+        <div class="banner-area">
+          <aside class="{{ container }} section clearfix no-padding" role="complementary">
+            {{ page.highlighted }}
+          </aside>
+        </div>
+      </section>
+
+    {% endif %}
+    {# end hight light regin hight light regin  for slider home #}
+
+    {% if page.featured_top %}
+      {% block featured %}
+        <div class="featured-top">
+          <aside class="featured-top__inner section {{ container }} clearfix" role="complementary">
+            {{ page.featured_top }}
+          </aside>
+        </div>
+      {% endblock %}
+    {% endif %}
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+      {% block content %}
+        <div id="main" class="{{ container }}">
+          {{ page.breadcrumb }}
+          <div class="row row-offcanvas row-offcanvas-left clearfix">
+            <main{{ content_attributes }}>
+              <section class="section">
+                <a id="main-content" tabindex="-1"></a>
+                {{ page.content }}
+              </section>
+            </main>
+            {% if page.sidebar_first %}
+              <div{{ sidebar_first_attributes }}>
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_first }}
+                </aside>
+              </div>
+            {% endif %}
+            {% if page.sidebar_second %}
+              <div{{ sidebar_second_attributes }}>
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_second }}
+                </aside>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endblock %}
+    </div>
+
+
+    {# add featured_bottom_first #}
+    {% if page.featured_bottom_first %}
+      <section class="about-section style-3 bg-about padding-tb">
+        <aside class="{{ container }} section clearfix" role="complementary">
+          {{ page.featured_bottom_first }}
+        </aside>
+      </section>
+    {% endif %}
+    {# end featured_bottom_first #}
+
+
+
+    {# add featured_bottom_second #}
+    {% if page.featured_bottom_second %}
+      <section class="service-section home-3 padding-tb service-section-home">
+        <aside class="{{ container }} section clearfix" role="complementary">
+          {{ page.featured_bottom_second }}
+        </aside>
+      </section>
+    {% endif %}
+    {# end featured_bottom_second #}
+
+
+    {# add featured_bottom_third #}
+    {% if page.featured_bottom_third %}
+      <section class="about-section style-3 bg-about padding-tb">
+        <aside class="{{ container }} section clearfix" role="complementary">
+          {{ page.featured_bottom_third }}
+        </aside>
+      </section>
+    {% endif %}
+    {# end featured_bottom_third #}
+
+
+    <footer class="site-footer">
+      {% block footer %}
+
+      <div class="footer-top padding-tb">
+        <div class="container">
+          <div class="row">
+
+            {% if page.footer_first %}
+              <div class="col-lg-5 col-md-6 col-12">
+                <div class="footer-item first-set">
+                  <div class="footer-inner">
+                    <div class="footer-content">
+                      {{ page.footer_first }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+
+            {% if page.footer_second %}
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="footer-item first-set">
+                  <div class="footer-inner">
+                    <div class="footer-content">
+                      {{ page.footer_second }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+            {% if page.footer_third %}
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="footer-item first-set">
+                  <div class="footer-inner">
+                    <div class="footer-content">
+                      {{ page.footer_third }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="section-wrapper">
+            <p class="drupalweb">&copy; تمامی حقوق محفوظ است. طراحی توسط <a href="https://www.drupalweb.ir/">دروپال
+                وب</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    {% endblock %}
+  </div>
+</div>

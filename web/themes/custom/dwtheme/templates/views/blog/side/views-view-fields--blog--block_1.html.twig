@@ -1,0 +1,11 @@
+<li class="d-flex flex-wrap justify-content-between">
+  <div class="post-content">
+    <a href="{{ fields.view_node.content|striptags|trim }}"><h6>
+        {{ fields.title.content }}
+      </h6></a>
+    <p>{{ fields.created.content }}</p>
+  </div>
+  <div class="post-thumb">
+    {{ fields.field_image.content }}
+  </div>
+</li>

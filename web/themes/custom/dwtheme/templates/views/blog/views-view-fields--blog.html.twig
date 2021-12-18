@@ -1,0 +1,23 @@
+<div class="col-sm-6 col-12 blog-home-block2">
+  <div class="post-item">
+    <div class="post-item-inner">
+      <div class="post-thumb">
+
+          {{ fields.field_image.content }}
+
+      </div>
+      <div class="post-content">
+        <h5> {{ fields.title.content }}</h5>
+        <div class="author-date">
+          <i class="icofont-calendar"></i>{{ fields.created.content }}
+          <i class="icofont-ui-user"></i>{{ fields.uid.content }}
+        </div>
+        {{ fields.body.content }}
+        <div class="post-footer">
+          <a href="/blog/{{ fields.nid.content|striptags|trim }}" class="text-btn">ادامه مطلب<i class="icofont-double-left"></i></a>
+          <a href="/blog/{{ fields.nid.content|striptags|trim }}" class="comments"><i class="icofont-comment"></i><span>{{ fields.comment_count.content }}</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
